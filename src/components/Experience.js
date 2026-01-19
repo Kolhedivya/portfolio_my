@@ -43,14 +43,14 @@ function Experience() {
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
         >
-            <h2 className="text-4xl font-bold text-lavender mb-12 text-center">📈 Career Timeline</h2>
+            <h2 className="text-4xl sm:text-md font-bold text-lavender mb-12 text-center">📈 Career Timeline</h2>
 
             <div className="overflow-x-auto">
-                <div className="flex gap-8 min-w-[900px] justify-start items-start">
+                <div className="flex flex-col md:flex-row gap-8 md:overflow-x-auto">
                     {timeline.map((item, index) => (
                         <motion.div
                             key={index}
-                            className="bg-ink border border-lavender rounded-xl p-6 min-w-[280px] shadow-lg hover:scale-105 transition-transform"
+                            className="bg-ink border border-lavender rounded-xl p-6 w-full md:min-w-[280px] shadow-lg hover:scale-105 transition-transform"
                             initial={{ opacity: 0, y: 30 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.5, delay: index * 0.2 }}

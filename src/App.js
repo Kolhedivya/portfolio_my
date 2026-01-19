@@ -13,7 +13,7 @@ import Contact from "./components/Contact";
 
 function App() {
   return (
-    <div className="font-sans text-gray-800">
+    <div className="px-4 sm:px-6 md:px-12 lg:px-24">
       <ScrollProgress />   {/* Progress bar */}
       <Navbar />
       <About />
