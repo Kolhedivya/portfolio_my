@@ -56,7 +56,7 @@ function Contact() {
             </div>
 
             <p className="mt-6 text-sm  text-white">
-                📞 (91) 888-910-6844 | 💌 divyakolhe1996@gmail.com
+                💌 iamdivya17@gmail.com
             </p>
         </motion.section>
     );
