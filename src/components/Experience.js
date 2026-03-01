@@ -1,9 +1,8 @@
-import React, { useState } from "react";
+
 import { motion } from "framer-motion";
 
 function Experience({ theme }) {
     const isLight = theme === "light";
-    const [activeIndex, setActiveIndex] = useState(null);
     const timeline = [
         {
             year: "2022 – Present",
