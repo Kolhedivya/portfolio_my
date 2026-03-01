@@ -1,7 +1,8 @@
 
 import ProjectCard from "./ProjectCard";
 
-function FeaturedProjects() {
+function FeaturedProjects({ theme }) {
+    const isLight = theme === "light";
     const projects = [
         {
             title: "Netflix GPT",
@@ -21,12 +22,29 @@ function FeaturedProjects() {
     ];
 
     return (
-        <section id="featured" className="section-gradient-3 p-12 text-ink">
-            <h2 className="text-4xl font-bold text-prussian mb-8 text-center">🚀 Featured Projects</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                {projects.map((project, index) => (
-                    <ProjectCard key={index} {...project} />
-                ))}
+        <section
+            id="featured"
+            className={`${isLight ? "section-gradient-3 text-ink" : "bg-black text-yellow-50"} px-4 sm:px-6 py-16`}
+        >
+            <div className="max-w-5xl mx-auto">
+                <div className="mb-10 text-center">
+                    <h2 className={`text-3xl sm:text-4xl font-bold mb-3 ${isLight ? "text-prussian" : "text-yellow-50"}`}>
+                        Featured Projects
+                    </h2>
+                    <p
+                        className={`text-sm sm:text-base max-w-2xl mx-auto ${isLight ? "text-dusk" : "text-yellow-50/80"
+                            }`}
+                    >
+                        A selection of hands-on projects highlighting real-world frontend engineering,
+                        performance, and UX considerations.
+                    </p>
+                </div>
+
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    {projects.map((project, index) => (
+                        <ProjectCard key={index} {...project} />
+                    ))}
+                </div>
             </div>
         </section>
 

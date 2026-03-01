@@ -5,20 +5,45 @@
 html {
     scroll-behavior: smooth;
     background-color: #0d1b2a;
-    /* Ink Black */
 }
 
-/* Section gradient backgrounds */
-.section-gradient-1 {
-    @apply bg-gradient-to-r from-ink via-prussian to-dusk;
+body {
+    @apply font-sans;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
 }
 
-.section-gradient-2 {
-    @apply bg-gradient-to-r from-prussian via-dusk to-lavender;
+.theme-dark {
+    @apply bg-black text-yellow-50;
 }
 
-.section-gradient-3 {
-    @apply bg-gradient-to-r from-dusk via-lavender to-alabaster;
+.theme-light {
+    @apply bg-white text-black;
+}
+
+/* Section gradient backgrounds (using only requested palette) */
+.theme-dark .section-gradient-1 {
+    @apply bg-gradient-to-r from-black via-yellow-700 to-orange-700;
+}
+
+.theme-dark .section-gradient-2 {
+    @apply bg-gradient-to-r from-black via-orange-700 to-yellow-600;
+}
+
+.theme-dark .section-gradient-3 {
+    @apply bg-gradient-to-r from-black via-yellow-600 to-orange-500;
+}
+
+.theme-light .section-gradient-1 {
+    @apply bg-gradient-to-r from-white via-yellow-100 to-orange-100;
+}
+
+.theme-light .section-gradient-2 {
+    @apply bg-gradient-to-r from-white via-orange-100 to-yellow-100;
+}
+
+.theme-light .section-gradient-3 {
+    @apply bg-gradient-to-r from-white via-yellow-100 to-orange-200;
 }
 
 /* Navbar hover effect */
